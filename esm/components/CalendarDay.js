@@ -165,7 +165,7 @@ function (_ref) {
         _this3.onKeyDown(day, e);
       },
       tabIndex: tabIndex
-    }), renderDayContents ? renderDayContents(day, modifiers) : day.format('D'));
+    }), React.createElement("div", css(selected && !modifiers.has('selected-span') && styles.CalendarDay__selected_Div), renderDayContents ? renderDayContents(day, modifiers) : day.format('D')));
   };
 
   return CalendarDay;
@@ -269,6 +269,15 @@ export default withStyles(function (_ref2) {
         color: color.selected.color_active
       }
     },
+    CalendarDay__selected_Div: {
+      height: '100%',
+      width: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: '50%',
+      backgroundColor: 'red'
+    },
     CalendarDay__hovered_span: {
       background: color.hoveredSpan.backgroundColor,
       border: "1px double ".concat(color.hoveredSpan.borderColor),
@@ -322,8 +331,14 @@ export default withStyles(function (_ref2) {
       background: color.core.borderLighter,
       border: "1px double ".concat(color.core.borderLight)
     },
-    CalendarDay__selected_start: {},
-    CalendarDay__selected_end: {},
+    CalendarDay__selected_start: {
+      borderTopLeftRadius: '50%',
+      borderBottomLeftRadius: '50%'
+    },
+    CalendarDay__selected_end: {
+      borderTopRightRadius: '50%',
+      borderBottomRightRadius: '50%'
+    },
     CalendarDay__today: {},
     CalendarDay__firstDayOfWeek: {},
     CalendarDay__lastDayOfWeek: {}

@@ -354,6 +354,25 @@
   border: 1px double #00a699;
   color: #fff
 }
+.CalendarDay__selected_Div {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: red
+}
 .CalendarDay__hovered_span,
 .CalendarDay__hovered_span:hover {
   background: #b2f1ec;
@@ -386,6 +405,14 @@
 .CalendarDay__hovered_start_blocked_min_nights {
   background: #eceeee;
   border: 1px double #e4e7e7
+}
+.CalendarDay__selected_start {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%
+}
+.CalendarDay__selected_end {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%
 }
 .CalendarMonth {
   background: #fff;
